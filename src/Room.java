@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Room {
     private int roomNumber;
     private String roomName;
-    private ArrayList<String> description;
+    private String description;
     private boolean isVisited;
     private ArrayList<Exit> exits;
 
@@ -12,7 +12,7 @@ public class Room {
 
     }
 
-    public Room(int roomNumber, String roomName, ArrayList<String> description, boolean isVisited, ArrayList<Exit> exits) {
+    public Room(int roomNumber, String roomName, String description, boolean isVisited, ArrayList<Exit> exits) {
         this.roomNumber = roomNumber;
         this.roomName = roomName;
         this.description = description;
@@ -37,10 +37,10 @@ public class Room {
         this.roomName = roomName;
     }
 
-    public ArrayList<String> getDescription() {
+    public String getDescription() {
         return description;
     }
-    public void setDescription(ArrayList<String> description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
