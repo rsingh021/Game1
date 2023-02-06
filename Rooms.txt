@@ -1,60 +1,96 @@
 1
 Beginning
-You are standing at the end of a road before a dark and dank cave. The forest is covering the road lending a dark and spooky aspect to the road. You hear a low wailing that seems to be coming from the cave. You can go WEST
+You are standing at the end of a road before a dark and dank cave. The forest is covering the road lending a dark and
+spooky aspect to the road. You hear a low wailing that seems to be coming from the cave.
+exits
+You can go WEST
 ----
 WEST 2
 ----
 2
 Entrance
-You have entered a dark, low cave that seems to lead to a slightly larger cavern to the west. Strangely you see a faint glow coming from the east. You can go EAST or SOUTH
+You have entered a dark, low cave that seems to lead to a slightly larger cavern to the west. Strangely you see a faint
+glow coming from the east.
+exits
+You can go EAST or SOUTH
 ----
+EAST 1
 SOUTH 3
 ----
 3
 Cavern
-You enter a large cavern. You are surprised to find that the walls of the cave are glowing so you have no problem seeing the large stalactites that have formed. To the south you hear the sound of rushing water. To the north you hear strange sounds that sound like someone with a broken heart. You see as set of stairs at the west end of the cavern. You can go EAST or NORTH
+You enter a large cavern. You are surprised to find that the walls of the cave are glowing so you have no problem
+seeing the large stalactites that have formed. To the south you hear the sound of rushing water. To the north you hear
+strange sounds that sound like someone with a broken heart. You see as set of stairs at the west end of the cavern.
+exits
+You can go EAST or NORTH
 ----
+EAST 4
 NORTH 2
 ----
 4
 Spooky Cave
-You have entered a dark twisting, tunnel that seems to wind around the Cavern. The low wailing you heard before has risen to a screech that is making your hair stand on end. You see a sign that says "Proceed at your own risk. Anyone entering this area will be eaten. You can go SOUTH or WEST
+You have entered a dark twisting, tunnel that seems to wind around the Cavern. The low wailing you heard before has
+risen to a screech that is making your hair stand on end. You see a sign that says "Proceed at your own risk. Anyone
+entering this area will be eaten.
+exits
+You can go SOUTH or WEST
 ----
+SOUTH 5
 WEST 3
 ----
 5
 Rushing River
-You have entered a wet, slippery cave. You are standing on a narrow ledge. As you slip toward the rushing river, you think, "I shouldn't be here. You can go SOUTH or WEST or NORTH
+You have entered a wet, slippery cave. You are standing on a narrow ledge. As you slip toward the rushing river, you
+think, "I shouldn't be here.
+exits
+You can go SOUTH or WEST or NORTH
 ----
+WEST 6
+SOUTH 7
 NORTH 4
 ----
 6
 Dead End
-As you enter this dark and forbidding cavern you hear the roar of some enormous monster. You decide that leaving this place would be a great idea. You can go EAST
+As you enter this dark and forbidding cavern you hear the roar of some enormous monster.
+You decide that leaving this place would be a great idea.
+exits
+You can go EAST
 ----
 EAST 5
 ----
 7
 Second level
-At the bottom of the stairs you see a skeleton from a previous adventurer. You really wish you had some good weapons. You can go NORTH or WEST
+At the bottom of the stairs you see a skeleton from a previous adventurer. You really wish you had some good weapons.
+exits
+You can go NORTH or WEST
 ----
+NORTH 5
 WEST 8
 ----
 8
 Cavern of Bones
-This room is covered with the bones of previous adventurers. You can go NORTH or EAST
+This room is covered with the bones of previous adventurers.
+exits
+You can go NORTH or EAST
 ----
+EAST 7
 NORTH 9
 ----
 9
 Impending Doom
-You feel very frightened by this room. Perhaps you need to leave quickly. You can go WEST or SOUTH
+You feel very frightened by this room. Perhaps you need to leave quickly.
+exits
+You can go WEST or SOUTH
 ----
+WEST 10
 SOUTH 8
 ----
 10
 Finish
-Congratulations!!! You have completed the journey through my maze. You can go EAST
+Congratulations!!! You have completed the journey through my maze
+exits
+You can go EAST
 ----
 EAST 9
 ----
