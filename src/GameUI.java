@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GameUI {
-    public static <Arraylist> void main(String[] args) {
-        Player player = new Player();
+    public static void main(String[] args) {
+        //Player player = new Player();
 
 
         System.out.println("Welcome to my adventure game. You will proceed through rooms based upon your entries.");
@@ -21,24 +21,38 @@ public class GameUI {
         }
         //all arraylists needed
         ArrayList<Room> rooms = new ArrayList<>();
-        ArrayList<String> description = new ArrayList<>();
+        //ArrayList<String> description = new ArrayList<>();
         ArrayList<Exit> exits = new ArrayList<>();
 
         while(read.hasNext()){
 
-            int roomNumber = Integer.parseInt(read.nextLine());
+            int roomNum = Integer.parseInt(read.nextLine());
+            room.setRoomNumber(roomNum);
+            System.out.println(room.getRoomNumber());
             String roomName = read.nextLine();
+            room.setRoomName(roomName);
+            System.out.println(room.getRoomName());
+
+
             //trying to get the reader to stop reading the description and stop when it reaches "----"
-            String descrip = read.nextLine();
-            description.add(descrip);
-            while (!descrip.equals("----")) {
-                descrip = read.nextLine();
-                description.add(descrip);
+            StringBuilder description = new StringBuilder();
+            String text = read.nextLine();
+            while (!text.equals("----")) {
+                description.append(text).append("\n");
+                text = read.nextLine();
             }
+            room.setDescription(description.toString());
+            System.out.println(room.getDescription());
 
 
-                rooms.add(new Room(roomNumber,roomName,description,true, exits));
-                System.out.println(description);
+            //reading exits
+
+
+
+
+
+            rooms.add(new Room(roomNum,roomName,description.toString(),true, exits));
+
 
 
 

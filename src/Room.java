@@ -11,7 +11,6 @@ public class Room {
     public Room(){
 
     }
-
     public Room(int roomNumber, String roomName, String description, boolean isVisited, ArrayList<Exit> exits) {
         this.roomNumber = roomNumber;
         this.roomName = roomName;
