@@ -28,10 +28,7 @@ public class Exit {
 
     @Override
     public String toString() {
-        return "Exit{" +
-                "direction='" + direction + '\'' +
-                ", destination=" + destination +
-                '}';
+        return direction + " " + destination;
     }
 }
 
