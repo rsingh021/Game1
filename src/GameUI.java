@@ -4,6 +4,22 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class GameUI {
+
+
+    /**
+     * you will need to create a method to play the game. or you can create
+     * this one inside  of the main method or create a seprate method. if you
+     * are creating a new method to play the game, then you will need to
+     * create a Player object, Room object, and you will start the game with
+     * prompt to provide instruction. Then, you will use the loop to play the
+     * game by asking questions what the player wants to do....
+     *
+     * @param args
+     */
+
+
+
+
     public static void main(String[] args) {
         //Player player = new Player();
 
