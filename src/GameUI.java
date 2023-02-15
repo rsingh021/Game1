@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class GameUI {
@@ -18,8 +19,6 @@ public class GameUI {
      */
 
 
-
-
     public static void main(String[] args) {
         //Player player = new Player();
 
@@ -29,14 +28,14 @@ public class GameUI {
         //reading room.txt
         File roomFile = new File("Rooms.txt");
         Scanner read = null;
-        try{
+        try {
             read = new Scanner(roomFile);
         } catch (FileNotFoundException e) {
             throw new RuntimeException("File not found");
         }
         ArrayList<Room> rooms = new ArrayList<>();
 
-        while(read.hasNext()){
+        while (read.hasNext()) {
             ArrayList<Exit> exits = new ArrayList<>();
             Room room = new Room();
             int roomNum = read.nextInt();
@@ -58,22 +57,77 @@ public class GameUI {
 
             //reading exits
             String direction = read.next();
-            while(!direction.equals("----"))
-            {
+            while (!direction.equals("----")) {
                 int nextRoom = read.nextInt();
-                exits.add((new Exit(direction,nextRoom)));
+                exits.add((new Exit(direction, nextRoom)));
                 direction = read.next();
             }
             room.setExits(exits);
             rooms.add(room);
 
 
-
-          //  rooms.add(new Room(roomNum,roomName,description.toString(),true, exits));
         }
 
+        Player player = new Player();
+        player.setLocation(0);
+        String direc;
+
+        do {
+
+            System.out.println(rooms.get(player.location).getRoomNumber());
+            //System.out.println(rooms.get(player.location).getRoomName());
+            if (rooms.get(player.location).isVisited()) {
+                System.out.println("Welcome back to " + rooms.get(player.location).getRoomName());
+            } else {
+                System.out.println("Welcome to " + rooms.get(player.location).getRoomName());
+                rooms.get(player.location).setVisited(true);
+            }
+            System.out.println(rooms.get(player.location).getDescription());
+            System.out.println(rooms.get(player.location).getExits());
+            //System.out.println();
 
 
+            Exit exit = new Exit();
+            List<String> compass = new ArrayList<String>();
+            compass.add("west");
+            compass.add("east");
+            compass.add("north");
+            compass.add("south");
+            compass.add("w");
+            compass.add("e");
+            compass.add("n");
+            compass.add("s");
+
+
+            Scanner input = new Scanner(System.in);
+            while (true) {
+                direc = input.nextLine();
+                if (compass.contains(direc.toLowerCase())) {
+                    exit.setDirection(direc);
+                    break;
+                }
+                if (direc.equalsIgnoreCase("quit")) {
+                    break;
+                }
+            }
+            if (direc.equalsIgnoreCase("quit")) {
+                break;
+            }
+            //this is looping through the different exits and finding the direction that equals the direction that the user inputted.
+            //when it is true the exit destination is set to the destination that matched the user input's direction
+            //i know its confusing and i will have it fixed for game2, but it works:)
+            for (int i = 0; i < rooms.get(player.location).getExits().size(); i++) {
+                if (exit.getDirection().equalsIgnoreCase(rooms.get(player.location).getExits().get(i).getDirection())) {
+                    exit.setDestination(rooms.get(player.location).getExits().get(i).getDestination());
+                }
+            }
+            //System.out.println(exit.getDestination());
+            System.out.println();
+            //setting the
+            player.setLocation(exit.getDestination());
+        } while (true);
+
+        System.out.println("quitted");
 
 
     }
