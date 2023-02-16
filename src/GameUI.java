@@ -93,10 +93,10 @@ public class GameUI {
             compass.add("east");
             compass.add("north");
             compass.add("south");
-            compass.add("w");
-            compass.add("e");
-            compass.add("n");
-            compass.add("s");
+//            compass.add("w");
+//            compass.add("e");
+//            compass.add("n");
+//            compass.add("s");
 
 
             Scanner input = new Scanner(System.in);
@@ -127,7 +127,7 @@ public class GameUI {
             player.setLocation(exit.getDestination());
         } while (true);
 
-        System.out.println("quitted");
+        System.out.println("You have quit the game");
 
 
     }
