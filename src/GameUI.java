@@ -100,6 +100,9 @@ public class GameUI {
 
 
             Scanner input = new Scanner(System.in);
+            // instead of using true for the while loop, you can use a
+            // boolean variable. this is better way to solve this problem.
+            // Then, you do not need to use multiple break statements.
             while (true) {
                 direc = input.nextLine();
                 if (compass.contains(direc.toLowerCase())) {
